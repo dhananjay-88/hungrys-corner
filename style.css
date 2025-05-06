@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section1 {
+    background-image: url("assets/hello.jpg");
+    height: 50vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: rgb(108, 160, 220);
+    font-size: 40px;
+}
+
+.elements {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    font-family: "Bona Nova SC", serif;
+    font-size: 18px;
+}
+
+.elements li {
+    display: flex;
+    align-items: center;
+}
+
+.order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: rgb(108, 160, 220);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.circle svg {
+    height: 22px;
+    width: 22px;
+    fill: rgb(108, 160, 220);
+}
+
+.main {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    padding: 0 60px;
+}
+
+.cafeimg img {
+    filter: opacity(0.9);
+    border-radius: 30px;
+    height: 80vh;
+    width: 60vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: #333;
+    padding: 20px;
+    max-width: 40vw;
+}
+
+.content h1 {
+    font-size: 34px;
+    color: rgb(108, 160, 220);
+    margin-bottom: 15px;
+}
+
+.content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.signup {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(108, 160, 220);
+    height: 60px;
+    width: 350px;
+    padding: 0 20px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.call-icon {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+.circle1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.circle1 svg {
+    width: 20px;
+    height: 20px;
+    fill: rgb(108, 160, 220);
+}
+
+.break {
+    height: 5px;
+    width: 100vw;
+    border: 1px solid grey;
+    background-color: gray;
+}
+
+.section2 {
+    padding: 70px;
+    position: relative;
+}
+
+.box1 {
+    position: relative;
+    background-color: rgb(108, 160, 220);
+    border-radius: 40px;
+    margin: auto;
+    height: 80vh;
+    width: 78vw;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(246, 246, 246);
+    border-radius: 40px;
+    height: 90vh;
+    width: 75vw;
+    z-index: 2;
+}
+
+.nav {
+    color: rgb(108, 160, 220);
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order1 {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: rgb(108, 160, 220);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.scroll {
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+    /* Chrome */
+}
+
+.menu1 {
+    position: relative;
+    flex: 0 0 auto;
+    border-radius: 30px;
+    height: 50vh;
+    width: 15vw;
+    overflow: hidden;
+}
+
+.menu1 img {
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.name1 {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    gap: 20px;
+}
+
+/* Keep these from before */
+.arrow-group {
+    display: flex;
+    gap: 10px;
+}
+
+.arrow-circle {
+    height: 45px;
+    width: 45px;
+    background-color: rgb(108, 160, 220);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.arrow-circle:hover {
+    background-color: white;
+}
+
+.arrow-circle img {
+    height: 25px;
+    width: 25px;
+    filter: invert(1);
+    /* white arrow */
+}
+
+.arrow-circle:hover img {
+    filter: invert(34%) sepia(21%) saturate(1684%) hue-rotate(175deg) brightness(96%) contrast(85%);
+}
+
+.para {
+    max-width: 60%;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+.section3 {
+    position: relative;
+}
+.mainbg img{
+    filter: opacity(0.9);
+    position: relative;
+    border-radius: 40px;
+    margin: auto;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 95vw;  
+}
+.upper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent grey */
+    border-radius: 40px;
+    height: 55vh;
+    width: 70vw;
+    z-index: 2;
+
+    /* Center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    color: white; /* white text looks better on grey */
+    font-family: "Poppins", sans-serif;
+}
+
+.upper h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.upper p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 80%;
+}
+/* Section 4 - FAQ */
+.section4 {
+    margin: auto;
+    max-width: 800px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+.section4 h1 {
+    color: rgb(108, 160, 220);
+    font-size: 38px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.faq {
+    margin-bottom: 20px; /* Ensure there's space between each FAQ */
+    border: 1px solid #ddd; /* Add a border to each question box */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Space around the content */
+    background-color: #f9f9f9; /* Light background for the FAQ box */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.faq:hover {
+    background-color: #f1f1f1; /* Slightly darker background when hovered */
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px; /* Increase font size for better readability */
+    font-weight: 500; /* Bold question text */
+}
+
+.question img {
+    height: 20px;
+    width: 20px;
+    transition: transform 0.3s ease; /* Add a smooth rotate effect to the arrow */
+}
+
+.faq.active .question img {
+    transform: rotate(180deg); /* Rotate arrow when the answer is shown */
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-top: 15px; /* Padding to space out the answer text */
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left; /* Align text to the left for a clean look */
+    color: #555; /* Darker color for the answer text */
+}
+
+.faq.active .answer {
+    max-height: 300px; /* Allow the answer to expand */
+}
+
+.faq.active .answer p {
+    margin-bottom: 0; /* Remove margin at the bottom of the answer */
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Management</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container"></div>
+        <div class="welcome">
+            <span>Get started now</span>
+            <img src="store/images/hand-shake-svgrepo-com.svg" alt="svg" class="handwave">
+            <div>Take a bite, take a break, then dive back in.</div>
+
+            <div class="signin">
+                <input type="text" id="name" placeholder="Enter your name">
+                <input type="email" id="email" placeholder="Example@gmail.com">
+                <input type="password" id="password" placeholder="At least 8 characters">
+                <button onclick="handleSignUp()">Sign up</button>
+            </div>
+
+            <div class="section1"></div>
+
+            <div class="option">
+                <div1><img src="store/images/google-removebg-preview.png">Sign in with Google</div1>
+                <div2><img src="store/images/facebook-removebg-preview.png">Sign in with Facebook</div2>
+                <p>Do you have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleSignUp() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name === "") {
+                alert("Please enter your name.");
+                return;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters.");
+                return;
+            }
+
+            // Store user info in localStorage
+            localStorage.setItem("userName", name);
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("userPassword", password);
+
+
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>
