@@ -297,6 +297,19 @@
     filter: invert(34%) sepia(21%) saturate(1684%) hue-rotate(175deg) brightness(96%) contrast(85%);
 }
 
+.scroll-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 40px;
+  }
+  
+  .left-arrow, .right-arrow {
+    flex-shrink: 0;
+  }
+  
+
 .para {
     max-width: 60%;
     text-align: left;
@@ -418,3 +431,4 @@
     margin-bottom: 0; /* Remove margin at the bottom of the answer */
 }
 
+    

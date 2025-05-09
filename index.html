@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hungry's Corner</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
@@ -55,54 +56,44 @@
     </div>
 
     <div class="section2">
-        <div class="box1"></div>
-        <div class="box2">
-            <div class="nav">
-                Satisfy your cravings
-                <button class="order1">
-                    Order Now
-                    <div class="circle">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M7 17L17 7M17 7H9M17 7V15" stroke="rgb(108, 160, 220)" stroke-width="2" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+        <div class="box1">
+            <div class="box2">
+                <div class="nav">
+                    <div>Our Special Menu</div>
+                    <button class="order1">Order Now</button>
+                </div>
+
+                <div class="scroll-wrapper">
+                    <div class="arrow-circle left-arrow" id="leftArrow">
+                        <img src="assets/arrow-sm-left-svgrepo-com.svg" alt="Left" />
                     </div>
-                </button>
-            </div>
-            <div class="scroll">
-                <div class="menu1">
-                    <img src="assets/coffee.avif" alt="coffee">
-                    <div class="name1">Coffee</div>
-                </div>
-                <div class="menu1">
-                    <img src="assets/burger.avif" alt="burger">
-                    <div class="name1">Burger</div>
-                </div>
-                <div class="menu1">
-                    <img src="assets/milkshake.avif" alt="pizza">
-                    <div class="name1">Milkshake</div>
-                </div>
-                <div class="menu1">
-                    <img src="assets/fries.avif" alt="fries">
-                    <div class="name1">Fries</div>
-                </div>
-                <div class="menu1">
-                    <img src="assets/dosa.jpg" alt="sandwich">
-                    <div class="name1">South Indian</div>
-                </div>
-            </div>
-            <div class="end">
-                <div class="arrow-group">
-                    <div class="arrow-circle">
-                        <img src="assets/arrow-sm-left-svgrepo-com.svg" alt="left arrow" />
+
+                    <div class="scroll" id="imageScroll">
+                        <div class="menu1"><img src="assets/coffee.avif" alt="Item 1">
+                            <div class="name1">Coffee</div>
+                        </div>
+                        <div class="menu1"><img src="assets/burger.avif" alt="Item 2">
+                            <div class="name1">Burger</div>
+                        </div>
+                        <div class="menu1"><img src="assets/dosa.jpg" alt="Item 3">
+                            <div class="name1">Dosa</div>
+                        </div>
+                        <div class="menu1"><img src="assets/fries.avif" alt="Item 4">
+                            <div class="name1">Fries</div>
+                        </div>
+                        <div class="menu1"><img src="assets/milkshake.avif" alt="Item 5">
+                            <div class="name1">Milkshake</div>
+                        </div>
+                        <!-- Add more if needed -->
                     </div>
-                    <div class="arrow-circle">
-                        <img src="assets/arrow-sm-right-svgrepo-com.svg" alt="right arrow" />
+
+                    <div class="arrow-circle right-arrow" id="rightArrow">
+                        <img src="assets/arrow-sm-right-svgrepo-com.svg" alt="Right" />
                     </div>
                 </div>
                 <div class="para">
-                    Craving something delicious? We’ve got you covered! Add your favorites to the cart and enjoy quick
-                    takeaways or doorstep delivery. Whether it’s a caffeine fix or a tasty snack, Hungry Scholar is here
+                    Craving something delicious? We've got you covered! Add your favorites to the cart and enjoy quick
+                    takeaways or doorstep delivery. Whether it's a caffeine fix or a tasty snack, Hungry Scholar is here
                     to satisfy your hunger—anytime, anywhere!
                 </div>
             </div>
@@ -185,9 +176,24 @@
                 <img src="assets/down-arrow-svgrepo-com.svg" alt="down">
             </div>
             <div class="answer">
-                <p>Before placing an order, we recommend reviewing our menu, ensuring you’re signed in for a customized
+                <p>Before placing an order, we recommend reviewing our menu, ensuring you're signed in for a customized
                     experience, and preparing any questions you may have to enhance your ordering journey.</p>
             </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar from menu.css -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <span>Your Cart</span>
+            <span id="closeCart" style="cursor: pointer;">✕</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be populated here -->
+        </div>
+        <div class="cart-footer">
+            <div>Total: <span id="cartTotal">$0.00</span></div>
+            <button class="checkout-btn">Checkout</button>
         </div>
     </div>
 
@@ -204,6 +210,36 @@
         // Redirect to login page
         document.getElementById("signupLoginBtn").addEventListener("click", () => {
             window.location.href = "login.html";
+        });
+
+        // Fixed carousel navigation
+        document.getElementById("leftArrow").addEventListener("click", () => {
+            const scrollContainer = document.getElementById("imageScroll");
+            scrollContainer.scrollBy({
+                left: -300,
+                behavior: "smooth",
+            });
+        });
+
+        document.getElementById("rightArrow").addEventListener("click", () => {
+            const scrollContainer = document.getElementById("imageScroll");
+            scrollContainer.scrollBy({
+                left: 300,
+                behavior: "smooth",
+            });
+        });
+
+        // Cart functionality
+        document.querySelector('.order').addEventListener('click', () => {
+            document.getElementById('cartSidebar').classList.add('active');
+        });
+
+        document.querySelector('.order1').addEventListener('click', () => {
+            document.getElementById('cartSidebar').classList.add('active');
+        });
+
+        document.getElementById('closeCart').addEventListener('click', () => {
+            document.getElementById('cartSidebar').classList.remove('active');
         });
     </script>
 
