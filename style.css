@@ -40,6 +40,17 @@
     align-items: center;
 }
 
+.elements li a {
+    color: black; /* or match your nav text color */
+    text-decoration: none;
+ 
+}
+
+.elements li a:hover {
+    text-decoration: underline; /* optional hover effect */
+}
+
+
 .order {
     display: flex;
     align-items: center;
