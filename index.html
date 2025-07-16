@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hungry's Corner</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
@@ -20,7 +19,7 @@
                 <li>About & Contact</li>
             </ul>
             <button class="order">
-                Order Now
+                <a href="menu.html">Order Now</a>
                 <div class="circle">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M7 17L17 7M17 7H9M17 7V15" stroke="rgb(108, 160, 220)" stroke-width="2" fill="none"
@@ -60,7 +59,7 @@
             <div class="box2">
                 <div class="nav">
                     <div>Our Special Menu</div>
-                    <button class="order1">Order Now</button>
+                    <button class="order1"><a href="menu.html">Order Now</a></button>
                 </div>
 
                 <div class="scroll-wrapper">
@@ -182,20 +181,7 @@
         </div>
     </div>
 
-    <!-- Cart Sidebar from menu.css -->
-    <div class="cart-sidebar" id="cartSidebar">
-        <div class="cart-header">
-            <span>Your Cart</span>
-            <span id="closeCart" style="cursor: pointer;">✕</span>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <!-- Cart items will be populated here -->
-        </div>
-        <div class="cart-footer">
-            <div>Total: <span id="cartTotal">$0.00</span></div>
-            <button class="checkout-btn">Checkout</button>
-        </div>
-    </div>
+
 
     <script>
         // FAQ Toggle

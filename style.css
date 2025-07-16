@@ -67,6 +67,17 @@
     cursor: pointer;
 }
 
+.order a,
+.order1 a {
+    color: white !important;        /* force white text always */
+    text-decoration: none !important;  /* remove underline */
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
 .circle {
     display: flex;
     justify-content: center;
